@@ -25,10 +25,10 @@ const NavBar = () => {
                 </ul>
 
                 <div className="items-center gap-[10px] flex">
-                    <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{border: "1px solid #00000033"}}>
+                    <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{ border: "1px solid #00000033" }}>
                         <HiOutlineShoppingCart />
                     </button>
-                    <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{border: "1px solid #00000033"}}>
+                    <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{ border: "1px solid #00000033" }}>
                         <MdOutlineFavoriteBorder />
                     </button>
 
@@ -46,7 +46,7 @@ const NavBar = () => {
                     </div>
                     <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
                         <NavLink to="/"><li className="navBarLink">Home</li></NavLink>
-                        <NavLink to="/coffees"><li className="navBarLink">Coffees</li></NavLink>
+                        <NavLink to="/statistics"><li className="navBarLink">Coffees</li></NavLink>
                         <NavLink to="/dashboard"><li className="navBarLink">Dashboard</li></NavLink>
                     </ul>
                 </aside>

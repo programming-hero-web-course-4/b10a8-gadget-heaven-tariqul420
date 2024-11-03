@@ -47,9 +47,7 @@ const Footer = () => {
             <div
                 className="z-30 absolute bottom-3 left-0 right-0 px-3 flex items-center justify-between w-full">
                 <p className="text-[0.9rem] text-gray-300">© {new Date().getFullYear()} All Rights Reserved</p>
-                <a href="#">
-                    <SlArrowUp className="p-2 rounded-full border border-gray-300 cursor-pointer text-[2rem] text-gray-300" />
-                </a>
+                <SlArrowUp className="p-2 rounded-full border border-gray-300 cursor-pointer text-[2rem] text-gray-300" />
             </div>
             <img src="https://i.ibb.co/zNk7XT4/Rectangle-97.png" alt="background/image"
                 className="absolute bottom-[20px] sm:bottom-0 left-0 right-0 z-10 rounded-b-xl" />

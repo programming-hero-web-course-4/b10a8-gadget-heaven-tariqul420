@@ -3,32 +3,33 @@ import { IoIosSearch } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const NavBar = () => {
 
+    const location = useLocation()
+
     const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
 
     return (
-        <div className="my-6">
-            <nav
-                className="flex items-center justify-between relative bg-white boxShadow rounded-full px-[10px] py-[8px] w-11/12 mx-auto">
+        <div className={`py-2 rounded-t-3xl mt-4 w-11/12 mx-auto ${location.pathname === '/' ? 'bg-color-primary' : ''}`}>
+            <nav className={`flex items-center justify-between relative boxShadow rounded-full px-[10px] py-[8px] w-11/12 mx-auto my-6 ${location.pathname === '/' ? 'bg-color-primary' : ''}`}>
                 <Link to="/">
-                    <h1 className="font-bold text-color-secondary text-2xl">Gadget Heaven</h1>
+                    <h1 className={`font-bold text-color-secondary text-2xl ${location.pathname === '/' && 'text-white'}`}>Gadget Heaven</h1>
                 </Link>
                 <ul className="items-center gap-[20px] text-[1rem] text-[#424242] lg:flex hidden">
-                    <NavLink to="/"><li className="navBarLink">Home</li></NavLink>
-                    <NavLink to="/statistics"><li className="navBarLink">Statistics</li></NavLink>
-                    <NavLink to="/dashboard"><li className="navBarLink">Dashboard</li></NavLink>
+                    <NavLink to="/"><li className={`navBarLink ${location.pathname === '/' && 'text-white border-b-2 border-solid border-white'}`}>Home</li></NavLink>
+                    <NavLink to="/statistics"><li className={`navBarLink ${location.pathname === '/' && 'text-white'}`}>Statistics</li></NavLink>
+                    <NavLink to="/dashboard"><li className={`navBarLink ${location.pathname === '/' && 'text-white'}`}>Dashboard</li></NavLink>
 
                 </ul>
 
                 <div className="items-center gap-[10px] flex">
-                    <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{ border: "1px solid #00000033" }}>
+                    <button className={`text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300 ${location.pathname === '/' && 'bg-white'}`} style={{ border: "1px solid #00000033" }}>
                         <HiOutlineShoppingCart />
                     </button>
-                    <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{ border: "1px solid #00000033" }}>
+                    <button className={`text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300 ${location.pathname === '/' && 'bg-white'}`} style={{ border: "1px solid #00000033" }}>
                         <MdOutlineFavoriteBorder />
                     </button>
 

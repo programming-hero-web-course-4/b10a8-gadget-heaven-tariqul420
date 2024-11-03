@@ -8,7 +8,7 @@ const Page404 = () => {
             style={{ background: "url(https://i.ibb.co/02DvRcV/404.jpg)", backgroundSize: "cover" }}>
             <div className="w-11/12 mx-auto">
                 <div className="boxShadow px-10 py-16 flex flex-col justify-center items-start rounded-xl w-full lg:w-[50%] h-auto">
-                    <h1 className="text-[15vw] leading-none font-bold text-center text-border" style={{ color: "transparent", WebkitTextStroke: "5px white" }}>404</h1>
+                    <h1 className="text-[15vw] leading-none font-bold text-center text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "5px white" }}>404</h1>
                     <h2 className="text-[1.1rem] sm:text-[3rem] font-[700] text-white">
                         Oops! Page not found
                     </h2>

@@ -7,7 +7,7 @@ function Root() {
   const navigation = useNavigation()
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-y-scroll">
       <NavBar />
       <div className="flex-grow">
         {

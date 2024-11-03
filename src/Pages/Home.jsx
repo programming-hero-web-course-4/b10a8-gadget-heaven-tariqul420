@@ -9,6 +9,7 @@ const Home = () => {
                     <img className="w-full rounded-3xl" src="https://i.postimg.cc/VkVstszV/banner.jpg" alt="" />
                 </div>
             </div>
+            <h2 className="text-center text-color-secondary font-bold text-5xl">Explore Cutting-Edge Gadgets</h2>
         </div>
     );
 };

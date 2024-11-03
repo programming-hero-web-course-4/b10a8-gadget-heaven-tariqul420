@@ -6,14 +6,14 @@ function Root() {
   const navigation = useNavigation()
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <NavBar />
-      <div>
+      <div className="flex-grow">
         {
           navigation.state === "loading" ? <Loading /> : <Outlet />
         }
       </div>
-    </>
+    </div>
   )
 }
 

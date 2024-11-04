@@ -25,7 +25,7 @@ const ProductDetails = () => {
                 </div>
                 <div>
                     <h2 className="font-bold text-3xl text-color-secondary">{product_title}</h2>
-                    <p className="text-color-secondary font-semibold mt-3">Price: {price}</p>
+                    <p className="text-color-secondary font-semibold mt-3">Price: ${price}</p>
                     <button className="px-4 py-1 rounded-full text-color-primary2 font-semibold my-4" style={{ border: "1px solid rgba(48, 156, 8)" }}>In Stock</button>
                     <p className="text-[18px] text-color-finely/80 font-semibold">{description}</p>
                     <div className="mt-3">

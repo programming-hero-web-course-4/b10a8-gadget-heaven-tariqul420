@@ -35,7 +35,7 @@ const DashboardCarts = () => {
                     <h2 className="text-2xl font-bold text-color-secondary">Cart</h2>
                 </div>
                 <div className="flex items-center gap-4">
-                    <h2 className="text-xl font-bold">Total cost: {totalAmount.toFixed(2)}K</h2>
+                    <h2 className="text-xl font-bold">Total cost: ${totalAmount.toFixed(2)}</h2>
                     <button className="flex items-center border border-solid border-color-primary px-4 py-2 rounded-full font-bold text-xl" onClick={handelSort}>Sort by Price <HiAdjustments /></button>
                     <button className="flex items-center border border-solid border-color-primary px-4 py-2 rounded-full font-bold text-xl bg-color-primary text-white">Purchase</button>
                 </div>

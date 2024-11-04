@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 const Card = ({ gadget }) => {
     const navigate = useNavigate()
-    console.log(navigate);
 
     const { product_image, product_title, price, product_id } = gadget
     return (

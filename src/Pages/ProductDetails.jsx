@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { addCart } from "../utilities/Cart";
 
 const ProductDetails = () => {
     const data = useLoaderData()
@@ -17,7 +18,7 @@ const ProductDetails = () => {
                 <p className="text-center text-white">Explore the latest gadgets that will take your experience to <br className="max-sm:hidden" /> the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
 
-            <div className="w-10/12 mx-auto flex gap-8 bg-white shadow-md p-8 absolute left-1/2 top-[85%] z-[1000] rounded-2xl" style={{transform: "translate(-50%,-50%)"}}>
+            <div className="w-10/12 mx-auto flex gap-8 bg-white shadow-md p-8 absolute left-1/2 top-[85%] z-[1000] rounded-2xl" style={{ transform: "translate(-50%,-50%)" }}>
                 <div className="w-[424px]">
                     <img className="w-full h-full rounded-2xl" src={product_image} alt="" />
                 </div>
@@ -46,7 +47,12 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <div className="flex gap-4 mt-4">
-                        <button className="flex items-center gap-4 bg-color-primary px-4 py-2 rounded-full text-white font-bold text-xl">Add To Card <HiOutlineShoppingCart size={25} /></button>
+                        <button
+                            className="flex items-center gap-4 bg-color-primary px-4 py-2 rounded-full text-white font-bold text-xl"
+                            onClick={() => addCart(productData)}
+                        >
+                            Add To Card <HiOutlineShoppingCart size={25} />
+                        </button>
                         <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{ border: "1px solid #00000033" }}>
                             <MdOutlineFavoriteBorder />
                         </button>

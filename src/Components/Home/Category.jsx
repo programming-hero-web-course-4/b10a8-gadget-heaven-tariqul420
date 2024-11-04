@@ -4,8 +4,12 @@ import { NavLink } from "react-router-dom";
 const Category = ({ category }) => {
     return (
         <div>
-            <NavLink to={`/category/${category.category}`}>
-                <h2 className="w-[205px] bg-gray-200 px-6 py-3 rounded-full text-xl font-semibold text-color-secondary/60">{category.category}</h2>
+            <NavLink
+                to={`/category/${category.category}`}
+                className={({ isActive }) =>
+                    `w-[205px] px-6 py-3 rounded-full text-xl font-semibold ${isActive ? "bg-color-primary text-white" : "bg-gray-200 text-color-secondary/60"}`
+                }>
+                {category.category}
             </NavLink>
         </div>
     );

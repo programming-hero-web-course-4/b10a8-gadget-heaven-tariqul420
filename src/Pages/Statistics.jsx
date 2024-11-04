@@ -3,7 +3,6 @@ import { Area, Bar, CartesianGrid, ComposedChart, Legend, Tooltip, XAxis, YAxis 
 
 const Statistics = () => {
     const data = useLoaderData()
-    console.log(data);
     return (
         <>
             <div className="bg-color-primary py-8">

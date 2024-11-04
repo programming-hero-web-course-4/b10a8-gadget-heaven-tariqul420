@@ -18,7 +18,7 @@ const GadgetCards = () => {
     }, [category, data, location.pathname])
 
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 mb-4">
             {
                 gadgets.map(gadget => <Card key={gadget.product_id} gadget={gadget} />)
             }

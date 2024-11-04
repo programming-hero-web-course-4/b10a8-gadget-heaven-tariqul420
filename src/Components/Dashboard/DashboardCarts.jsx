@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllCart } from "../../utilities/Cart";
+import { getAllCart, removeCart } from "../../utilities/Cart";
 import DashboardCart from "./DashboardCart";
 
 const DashboardCarts = () => {
@@ -10,8 +10,9 @@ const DashboardCarts = () => {
     }, [])
 
     const handelRemove = (id) => {
-        console.log(id);
-
+        removeCart(id)
+        const allProduct = getAllCart()
+        setProductCart(allProduct)
     }
     return (
         <div className="flex flex-col gap-8 my-10">

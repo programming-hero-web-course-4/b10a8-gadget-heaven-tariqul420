@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 const Category = ({ category }) => {
-    console.log(category);
     return (
         <div>
             <NavLink to={`/category/${category.category}`}>

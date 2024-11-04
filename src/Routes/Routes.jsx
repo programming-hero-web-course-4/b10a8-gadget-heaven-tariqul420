@@ -4,6 +4,7 @@ import Home from "../Pages/Home.jsx";
 import Page404 from "../Components/Others/Page404.jsx";
 import Statistics from "../Pages/Statistics.jsx";
 import Dashboard from "../Pages/Dashboard.jsx";
+import GadgetCards from "../Components/Home/GadgetCards.jsx";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +18,9 @@ const router = createBrowserRouter([
                 loader: () => fetch('../categories.json'),
                 children: [
                     {
-                        path: '../category/:category'
+                        path: '/category/:category',
+                        element: <GadgetCards />,
+                        loader: () => fetch("../gadgets.json")
                     }
                 ]
             },

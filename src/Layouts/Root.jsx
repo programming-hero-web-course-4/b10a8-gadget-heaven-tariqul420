@@ -1,18 +1,19 @@
-import { Outlet, useNavigation } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import NavBar from "../Components/Others/NavBar"
-import Loading from "../Components/Others/Loading"
+// import Loading from "../Components/Others/Loading"
 import Footer from "../Components/Others/Footer"
 
 function Root() {
-  const navigation = useNavigation()
+  // const navigation = useNavigation()
 
   return (
     <div className="min-h-screen flex flex-col overflow-y-scroll">
       <NavBar />
       <div className="flex-grow">
-        {
+        {/* {
           navigation.state === "loading" ? <Loading /> : <Outlet />
-        }
+        } */}
+        <Outlet />
       </div>
       <Footer />
     </div>

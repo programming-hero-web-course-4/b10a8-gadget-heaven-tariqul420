@@ -14,7 +14,7 @@ const Home = () => {
             </div>
             <h2 className="text-center text-color-secondary font-bold text-5xl">Explore Cutting-Edge Gadgets</h2>
 
-            <div className="w-11/12 mx-auto mt-8">
+            <div className="w-11/12 mx-auto mt-8 flex gap-8">
                 <div>
                     <Categories categories={categories} />
                 </div>

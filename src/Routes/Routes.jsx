@@ -6,6 +6,7 @@ import Statistics from "../Pages/Statistics.jsx";
 import Dashboard from "../Pages/Dashboard.jsx";
 import GadgetCards from "../Components/Home/GadgetCards.jsx";
 import ProductDetails from "../Pages/ProductDetails.jsx";
+import About from "../Pages/About.jsx";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard />
+            },
+            {
+                path: "/about",
+                element: <About />
             },
             {
                 path: "/product/:productId",

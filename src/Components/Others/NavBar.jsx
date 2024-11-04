@@ -26,6 +26,7 @@ const NavBar = () => {
                     <NavLink to="/"><li className={`navBarLink ${location.pathname === '/' && 'text-white border-b-2 border-solid border-white'}`}>Home</li></NavLink>
                     <NavLink to="/statistics"><li className={`navBarLink ${location.pathname === '/' && 'text-white'}`}>Statistics</li></NavLink>
                     <NavLink to="/dashboard"><li className={`navBarLink ${location.pathname === '/' && 'text-white'}`}>Dashboard</li></NavLink>
+                    <NavLink to="/about"><li className={`navBarLink ${location.pathname === '/' && 'text-white'}`}>About</li></NavLink>
 
                 </ul>
 

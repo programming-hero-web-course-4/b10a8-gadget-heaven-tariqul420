@@ -6,7 +6,6 @@ const getAllCart = () => {
         const products = JSON.parse(all);
         return products;
     } else {
-        console.log([]);
         return [];
     }
 };

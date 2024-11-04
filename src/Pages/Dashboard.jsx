@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react";
-import DashboardCart from "../Components/Dashboard/DashboardCart";
+import { useState } from "react";
+import DashboardCarts from "../Components/Dashboard/DashboardCarts";
 import DashboardWishlist from "../Components/Dashboard/DashboardWishlist";
-import { getAllCart } from "../utilities/Cart";
 
 const Dashboard = () => {
     const [dashboardBtn, setDashboardBtn] = useState(true)
-    const [cart, setCart] = useState([])
-    useEffect(() => {
-        const productCart = getAllCart()
-        setCart(productCart)
-    }, [])
-    console.log(cart);
     return (
         <div>
             <div className="bg-color-primary py-8 flex flex-col items-center">
@@ -35,7 +28,7 @@ const Dashboard = () => {
                 {
                     dashboardBtn
                         ?
-                        <DashboardCart />
+                        <DashboardCarts />
                         :
                         <DashboardWishlist />
                 }

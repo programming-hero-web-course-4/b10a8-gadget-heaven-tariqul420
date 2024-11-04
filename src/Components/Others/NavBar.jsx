@@ -37,6 +37,8 @@ const NavBar = () => {
                             <HiOutlineShoppingCart />
                         </button>
 
+                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">0</button>
+
                         {/*  tooltip  */}
                         <div
                             className={` ${isCart ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-290%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300`}>
@@ -63,6 +65,8 @@ const NavBar = () => {
                         <button className={`text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300 ${location.pathname === '/' && 'bg-white'}`} style={{ border: "1px solid #00000033" }}>
                             <MdOutlineFavoriteBorder />
                         </button>
+
+                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">0</button>
 
                         {/*  tooltip  */}
                         <div

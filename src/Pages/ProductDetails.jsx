@@ -3,6 +3,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { addCart } from "../utilities/Cart";
+import { addWishlist } from "../utilities/Wishlist";
 
 const ProductDetails = () => {
     const data = useLoaderData()
@@ -53,7 +54,10 @@ const ProductDetails = () => {
                         >
                             Add To Card <HiOutlineShoppingCart size={25} />
                         </button>
-                        <button className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300" style={{ border: "1px solid #00000033" }}>
+                        <button
+                            className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300"
+                            style={{ border: "1px solid #00000033" }}
+                            onClick={() => addWishlist(productData)}>
                             <MdOutlineFavoriteBorder />
                         </button>
                     </div>

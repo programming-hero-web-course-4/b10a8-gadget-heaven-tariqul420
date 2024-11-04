@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare } from "react-icons/fa";
 import { FiMessageCircle } from "react-icons/fi";
 
 const About = () => {
     const [isProfileHovered, setIsProfileHovered] = useState(false);
+
+    useEffect(() => {
+        document.title = 'About | Gadget Heaven';
+    }, []);
 
     return (
         <div className="max-w-4xl mx-auto my-10 p-6">

@@ -1,9 +1,14 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../Components/Home/Banner";
 import Categories from "../Components/Home/Categories";
+import { useEffect } from "react";
 
 const Home = () => {
     const categories = useLoaderData()
+    useEffect(() => {
+        document.title = 'Gadget Heaven';
+    }, []);
+
     return (
         <div>
             <div className="relative">
@@ -19,7 +24,7 @@ const Home = () => {
                     <Categories categories={categories} />
                 </div>
                 <div>
-                    <Outlet/>
+                    <Outlet />
                 </div>
             </div>
         </div>

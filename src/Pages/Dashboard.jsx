@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DashboardCarts from "../Components/Dashboard/DashboardCarts";
 import DashboardWishlist from "../Components/Dashboard/DashboardWishlist";
 
 const Dashboard = () => {
     const [dashboardBtn, setDashboardBtn] = useState(true)
+
+    useEffect(() => {
+        document.title = 'Dashboard | Gadget Heaven';
+    }, []);
+
     return (
         <div>
             <div className="bg-color-primary py-8 flex flex-col items-center">

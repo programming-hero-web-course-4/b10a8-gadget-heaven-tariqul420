@@ -4,6 +4,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { addCart } from "../utilities/Cart";
 import { addWishlist } from "../utilities/Wishlist";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
     const data = useLoaderData()
@@ -12,6 +13,11 @@ const ProductDetails = () => {
     const productData = data.find(product => product.product_id === parseInt(productId))
 
     const { product_title, product_image, price, description, Specification, rating } = productData
+
+    useEffect(() => {
+        document.title = 'Product | Gadget Heaven';
+    }, []);
+
     return (
         <div className="mb-[20rem]">
             <div className="bg-color-primary py-8 pb-56 relative">

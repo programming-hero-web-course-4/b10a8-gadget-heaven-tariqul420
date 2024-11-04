@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Area, Bar, CartesianGrid, ComposedChart, Legend, Tooltip, XAxis, YAxis } from "recharts";
 
 const Statistics = () => {
     const data = useLoaderData()
+
+    useEffect(() => {
+        document.title = 'Statistics | Gadget Heaven';
+    }, []);
+
     return (
         <>
             <div className="bg-color-primary py-8">

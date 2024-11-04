@@ -6,11 +6,10 @@ const GadgetCards = () => {
     const data = useLoaderData()
     const { category } = useParams()
     const location = useLocation()
-    console.log(location.pathname);
+
     const [gadgets, setGadgets] = useState([])
     useEffect(() => {
-        if (location.pathname === '/category/All%20Product') {
-            console.log(location.pathname);
+        if (location.pathname === '/') {
             setGadgets(data)
         } else {
             const filterByCategory = [...data].filter(gadget => gadget.category === category)

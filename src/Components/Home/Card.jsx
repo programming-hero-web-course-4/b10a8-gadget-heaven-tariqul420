@@ -20,10 +20,8 @@ const Card = ({ gadget }) => {
             />
 
             <div className="p-4">
-                <div className="mt-5 flex items-center justify-between w-full">
-                    <h3 className="text-[1.4rem] font-semibold flex items-center gap-[4px]">
-                        {price}
-                    </h3>
+                <div className="mt-5 flex items-center justify-between w-full"><h3 className="text-[1.4rem] font-semibold flex items-center gap-[4px]">{price}
+                </h3>
 
                     <button className="py-2 px-6 border border-color-primary text-color-primary rounded-md">View Details</button>
                 </div>

@@ -1,26 +1,30 @@
 [
     {
         "id": 1,
-        "category": "Laptops"
+        "category": "All Product"
     },
     {
         "id": 2,
-        "category": "Phones"
+        "category": "Laptops"
     },
     {
         "id": 3,
-        "category": "Accessories"
+        "category": "Phones"
     },
     {
         "id": 4,
-        "category": "Smart Watches"
+        "category": "Accessories"
     },
     {
         "id": 5,
-        "category": "MacBook"
+        "category": "Smart Watches"
     },
     {
         "id": 6,
+        "category": "MacBook"
+    },
+    {
+        "id": 7,
         "category": "iPhone"
     }
 ]

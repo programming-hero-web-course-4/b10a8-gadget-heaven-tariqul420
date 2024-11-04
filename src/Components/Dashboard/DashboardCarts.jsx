@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { getAllCart, removeCart } from "../../utilities/Cart";
 import DashboardCart from "./DashboardCart";
+import { ContextApi } from "../../Context/Context";
 
 const DashboardCarts = () => {
-    const [productCarts, setProductCart] = useState([])
+    const { productCarts, setProductCart } = useContext(ContextApi);
     useEffect(() => {
         const allProduct = getAllCart()
         setProductCart(allProduct)
-    }, [])
+    }, [setProductCart])
 
     const handelRemove = (id) => {
         removeCart(id)

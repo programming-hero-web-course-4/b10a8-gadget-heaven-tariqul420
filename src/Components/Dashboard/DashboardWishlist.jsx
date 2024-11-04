@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { getAllWishlist, removeWishlist } from "../../utilities/Wishlist";
 import DashboardCart from "./DashboardCart";
+import { ContextApi } from "../../Context/Context";
 
 const DashboardWishlist = () => {
-    const [productWishlist, setProductWishlist] = useState([])
+    const { productWishlist, setProductWishlist } = useContext(ContextApi);
     useEffect(() => {
         const allProduct = getAllWishlist()
         setProductWishlist(allProduct)
-    }, [])
+    }, [setProductWishlist])
 
     const handelRemove = (id) => {
         removeWishlist(id)

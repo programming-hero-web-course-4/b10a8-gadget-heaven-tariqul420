@@ -2,12 +2,14 @@
 import { IoIosSearch } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { ContextApi } from "../../Context/Context";
 
 const NavBar = () => {
-
+    const { productCarts } = useContext(ContextApi);
+    const { productWishlist } = useContext(ContextApi);
     const location = useLocation()
 
     const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
@@ -37,13 +39,13 @@ const NavBar = () => {
                             <HiOutlineShoppingCart />
                         </button>
 
-                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">0</button>
+                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productCarts.length}</button>
 
                         {/*  tooltip  */}
                         <div
                             className={` ${isCart ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-290%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300`}>
                             {/*  Content  */}
-                            <h2 className="text-center font-bold text-xl">1 Item In Cart</h2>
+                            <h2 className="text-center font-bold text-xl">{productCarts.length} Item In Cart</h2>
                             <button
                                 className="flex mx-auto  items-center border border-solid border-color-primary px-4 py-2 rounded-full font-bold">
                                 <Link to="/dashboard">
@@ -66,13 +68,13 @@ const NavBar = () => {
                             <MdOutlineFavoriteBorder />
                         </button>
 
-                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">0</button>
+                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productWishlist.length}</button>
 
                         {/*  tooltip  */}
                         <div
                             className={` ${isWishlist ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-290%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300`}>
                             {/*  Content  */}
-                            <h2 className="text-center font-bold text-xl">1 Item In Cart</h2>
+                            <h2 className="text-center font-bold text-xl">{productWishlist.length} Item In Cart</h2>
                             <button
                                 className="flex mx-auto  items-center border border-solid border-color-primary px-4 py-2 rounded-full font-bold">
                                 <Link to="/dashboard">

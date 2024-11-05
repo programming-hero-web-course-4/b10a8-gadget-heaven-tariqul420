@@ -27,6 +27,7 @@ const DashboardCarts = () => {
     const handelSort = () => {
         const sortedData = [...productCarts].sort((a, b) => b.price - a.price);
         setProductCart(sortedData)
+        console.log(sortedData);
     }
     return (
         <>

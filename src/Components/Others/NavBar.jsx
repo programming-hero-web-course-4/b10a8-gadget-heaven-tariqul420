@@ -40,7 +40,7 @@ const NavBar = () => {
                             <HiOutlineShoppingCart />
                         </button>
 
-                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productCarts.length}</button>
+                        <button className="absolute text-white top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productCarts.length}</button>
 
                         {/*  tooltip  */}
                         <div
@@ -69,7 +69,7 @@ const NavBar = () => {
                             <MdOutlineFavoriteBorder />
                         </button>
 
-                        <button className="absolute top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productWishlist.length}</button>
+                        <button className="absolute text-white top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productWishlist.length}</button>
 
                         {/*  tooltip  */}
                         <div

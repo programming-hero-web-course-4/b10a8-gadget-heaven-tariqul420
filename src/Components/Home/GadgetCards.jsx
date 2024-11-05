@@ -8,6 +8,7 @@ const GadgetCards = () => {
     const location = useLocation()
 
     const [gadgets, setGadgets] = useState([])
+
     useEffect(() => {
         if (location.pathname === '/') {
             setGadgets(data)

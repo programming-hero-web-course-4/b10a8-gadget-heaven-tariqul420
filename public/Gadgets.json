@@ -16,10 +16,10 @@
     },
     {
         "product_id": 2,
-        "product_title": "Apple MacBook",
-        "product_image": "https://i.postimg.cc/8CMJ4fKY/Apple-Mac-Book-Pro-16.jpg",
+        "product_title": "Lenovo Gaming",
+        "product_image": "https://i.postimg.cc/SQzKRND1/Lenovo-Idea-Pad-Gaming.jpg",
         "category": "Laptops",
-        "price": 2399.99,
+        "price": 1500.99,
         "description": "Professional laptop with exceptional performance.",
         "Specification": [
             "Apple M1 Pro",

@@ -75,7 +75,7 @@ const NavBar = () => {
                         <div
                             className={` ${isWishlist ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-290%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300`}>
                             {/*  Content  */}
-                            <h2 className="text-center font-bold text-xl">{productWishlist.length} Item In Cart</h2>
+                            <h2 className="text-center font-bold text-xl">{productWishlist.length} Item In Wishlist</h2>
                             <button
                                 className="flex mx-auto  items-center border border-solid border-color-primary px-4 py-2 rounded-full font-bold">
                                 <Link to="/dashboard">

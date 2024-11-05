@@ -1,8 +1,38 @@
-# React + Vite
+<div align="center">
+  <img src="https://i.postimg.cc/VvMHcSy2/Gadget-Heaven-logo-removebg-preview.png" width="60px" alt="Gadget Heaven"/> 
+  <h1>Gadget Heaven</h1>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+**Gadget Heaven** is a modern platform where you can find reviews and comparisons of smartphones, laptops, and smartwatches.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Link To The Deployed Project
+
+**Github Repo Link:** [_github/tariqul420_](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-tariqul420.git)
+
+**Live Site link:** [_Gadget-Heaven.com_](https://gadget-heaven-ph.surge.sh)
+
+## Requirement Document
+
+**Requirement Document** [_Gadget Heaven_](https://drive.google.com/file/d/1NxUgA7X1zDTy0pGGH5LrOrGAlsDfLEdd/view?usp=sharing)
+
+## React Concepts Used
+
+- **Components**
+- **Hooks** _(useState, useEffect, useContext)_
+- **React Router** _(useLoaderData, useParams, useLocation)_
+- **Conditional Rendering**
+- **Modal Handling**
+
+## Data Management
+
+- **Cart & Wishlist data management using Context API and LocalStorage.**
+
+## Features
+
+1.  **Product listing and filtering**
+2.  **Cart management**
+3.  **Payment confirmation modal**
+4.  **Responsive design**
+5.  **User-friendly UI/UX**

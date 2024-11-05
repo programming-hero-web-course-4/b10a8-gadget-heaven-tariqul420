@@ -16,14 +16,14 @@ const addWishlist = (product) => {
 
   wishlist.push(product);
   localStorage.setItem("productWishlist", JSON.stringify(wishlist));
-  toast.success("Successfully added!");
+  toast.success("Successfully Add Wishlist!");
 };
 
 const removeWishlist = (id) => {
   const wishlist = getAllWishlist();
   const remaining = wishlist.filter((product) => product.product_id !== id);
   localStorage.setItem("productWishlist", JSON.stringify(remaining));
-  toast.success("Successfully Removed!");
+  toast.success("Successfully Remove Wishlist!");
 };
 
 export { getAllWishlist, addWishlist, removeWishlist };

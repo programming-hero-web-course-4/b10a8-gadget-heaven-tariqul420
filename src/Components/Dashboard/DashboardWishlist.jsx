@@ -6,6 +6,8 @@ import WishlistCart from "./WishlistCart";
 
 const DashboardWishlist = () => {
     const { productWishlist, setProductWishlist } = useContext(ContextApi);
+    const { productCarts, setProductCart } = useContext(ContextApi);
+
     useEffect(() => {
         const allProduct = getAllWishlist()
         setProductWishlist(allProduct)
@@ -19,6 +21,7 @@ const DashboardWishlist = () => {
 
     const handelAddToCart = (product) => {
         addCart(product)
+        setProductCart([...productCarts, product])
         removeWishlist(product.product_id)
         const allProduct = getAllWishlist()
         setProductWishlist(allProduct)

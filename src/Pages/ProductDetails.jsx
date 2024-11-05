@@ -4,16 +4,31 @@ import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { addCart } from "../utilities/Cart";
 import { addWishlist } from "../utilities/Wishlist";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { ContextApi } from "../Context/Context";
+
 
 const ProductDetails = () => {
     const data = useLoaderData()
     const { productId } = useParams()
 
+    const { productCarts, setProductCart } = useContext(ContextApi);
+    const { productWishlist, setProductWishlist } = useContext(ContextApi);
+
+
     const productData = data.find(product => product.product_id === parseInt(productId))
 
     const { product_title, product_image, price, description, Specification, rating } = productData
 
+    const addCardsAll = (data) => {
+        addCart(data)
+        setProductCart([...productCarts, data])
+    }
+
+    const addWishlistAll = (data) => {
+        addWishlist(data)
+        setProductWishlist([...productWishlist, data])
+    }
     useEffect(() => {
         document.title = 'Product | Gadget Heaven';
     }, []);
@@ -56,14 +71,14 @@ const ProductDetails = () => {
                     <div className="flex gap-4 mt-4">
                         <button
                             className="flex items-center gap-4 bg-color-primary px-4 py-2 rounded-full text-white font-bold text-xl"
-                            onClick={() => addCart(productData)}
+                            onClick={() => addCardsAll(productData)}
                         >
                             Add To Card <HiOutlineShoppingCart size={25} />
                         </button>
                         <button
                             className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300"
                             style={{ border: "1px solid #00000033" }}
-                            onClick={() => addWishlist(productData)}>
+                            onClick={() => addWishlistAll(productData)}>
                             <MdOutlineFavoriteBorder />
                         </button>
                     </div>

@@ -7,7 +7,7 @@ const Category = ({ category }) => {
             <NavLink
                 to={`/category/${category.category}`}
                 className={({ isActive }) =>
-                    `w-[205px] px-6 py-3 rounded-full text-xl font-semibold ${isActive ? "bg-color-primary text-white" : "bg-gray-200 text-color-secondary/60"}`
+                    `w-full block px-6 py-3 rounded-full text-xl font-semibold ${isActive ? "bg-color-primary text-white" : "bg-gray-200 text-color-secondary/60"}`
                 }>
                 {category.category}
             </NavLink>

@@ -88,7 +88,7 @@ const ProductDetails = () => {
                             Add To Card <HiOutlineShoppingCart size={25} />
                         </button>
                         <button
-                            className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300 flex items-center gap-2 justify-center"
+                            className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300 flex items-center gap-2 font-bold text-xl justify-center"
                             style={{ border: "1px solid #00000033" }}
                             onClick={() => addWishlistAll(productData)}>Wishlist
                             <MdOutlineFavoriteBorder />

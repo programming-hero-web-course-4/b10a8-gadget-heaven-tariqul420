@@ -50,74 +50,73 @@ const About = () => {
 
             <hr className="my-6" />
 
-            <h2 className="text-2xl font-semibold mt-6 mb-4">About the Author</h2>
+            <h2 className="text-2xl font-semibold mt-6 mb-4 max-sm:text-center">About the Author</h2>
 
-            <div className="flex gap-8 max-sm:flex-col">
-                <div className="relative w-fit h-full flex items-center justify-center"
-                    onMouseEnter={() => setIsProfileHovered(true)}
-                    onMouseLeave={() => setIsProfileHovered(false)}
-                >
+            <div className="flex gap-8 max-sm:flex-col items-center justify-center">
+    <div className="relative w-fit h-full flex items-center justify-center mx-auto"
+        onMouseEnter={() => setIsProfileHovered(true)}
+        onMouseLeave={() => setIsProfileHovered(false)}
+    >
+        <img
+            src="https://i.postimg.cc/nzCvp3Yr/about.jpg"
+            alt="profile"
+            className="w-[100px] h-[100px] rounded-full object-cover border-4 border-[#3B9DF8] cursor-pointer"
+        />
+
+        <div
+            className={` ${isProfileHovered ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-270px] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300`}>
+
+            <div className="flex items-center justify-between border-b border-gray-200 pb-[7px]">
+                <p className="text-[1rem] font-[600] text-gray-700">Socials</p>
+                <div className="flex items-center gap-[8px]">
+                    <a target="_blank" href="https://www.facebook.com/tariqul.islam.fb">
+                        <FaFacebookSquare className="text-[1.3rem] text-gray-700 hover:text-[#3B9DF8] cursor-pointer hover:scale-[1.2] transition-all duration-200 ease-out" />
+                    </a>
+                    <a target="_blank" href="https://github.com/tariqul420">
+                        <FaGithubSquare className="text-[1.3rem] text-gray-700 hover:text-[#3B9DF8] cursor-pointer hover:scale-[1.2] transition-all duration-200 ease-out" />
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/tariqul.islam.fb">
+                        <FaInstagramSquare className="text-[1.3rem] text-gray-700 hover:text-[#3B9DF8] cursor-pointer hover:scale-[1.2] transition-all duration-200 ease-out" />
+                    </a>
+                </div>
+            </div>
+
+            <div className="flex items-center justify-center flex-col mt-5">
+                <div className="relative">
                     <img
                         src="https://i.postimg.cc/nzCvp3Yr/about.jpg"
                         alt="profile"
-                        className="w-[100px] h-[100px] rounded-full object-cover border-4 border-[#3B9DF8] cursor-pointer"
-                    />
-
-
+                        className="w-[80px] h-[80px] rounded-full object-cover" />
                     <div
-                        className={` ${isProfileHovered ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-270px] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300`}>
-
-                        <div
-                            className="flex items-center justify-between border-b border-gray-200 pb-[7px]">
-                            <p className="text-[1rem] font-[600] text-gray-700">Socials</p>
-                            <div className="flex items-center gap-[8px]">
-                                <a target="_blank" href="https://www.facebook.com/tariqul.islam.fb">
-                                    <FaFacebookSquare className="text-[1.3rem] text-gray-700 hover:text-[#3B9DF8] cursor-pointer hover:scale-[1.2] transition-all duration-200 ease-out" />
-                                </a>
-                                <a target="_blank" href="https://github.com/tariqul420">
-                                    <FaGithubSquare className="text-[1.3rem] text-gray-700 hover:text-[#3B9DF8] cursor-pointer hover:scale-[1.2] transition-all duration-200 ease-out" />
-                                </a>
-                                <a target="_blank" href="https://www.instagram.com/tariqul.islam.fb">
-                                    <FaInstagramSquare className="text-[1.3rem] text-gray-700 hover:text-[#3B9DF8] cursor-pointer hover:scale-[1.2] transition-all duration-200 ease-out" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="flex items-center justify-center flex-col mt-5">
-                            <div className="relative">
-                                <img
-                                    src="https://i.postimg.cc/nzCvp3Yr/about.jpg"
-                                    alt="profile"
-                                    className="w-[80px] h-[80px] rounded-full object-cover" />
-                                <div
-                                    className="w-[10px] h-[10px] rounded-full bg-green-400 absolute top-[7px] right-[8px] border-[2px] border-white"></div>
-                            </div>
-                            <h4 className="text-[1.1rem] font-[600] text-gray-700 mt-2">Tariqul Islam</h4>
-                            <p className="text-[0.8rem] text-gray-600">Front-End Developer</p>
-                        </div>
-
-                        <a target="_blank" href="https://m.me/tariqul.islam.fb">
-                            <button
-                                className="flex mx-auto hover:underline items-center gap-[8px] font-[500] text-[0.9rem] text-[#3B9DF8] mt-4">
-                                <FiMessageCircle className="text-[1.1rem]" />
-                                Send Message
-                            </button>
-                        </a>
-
-                        <div className="bg-white w-[15px] h-[15px] rotate-[45deg] absolute bottom-[-7px] left-[50%] transform translate-x-[-50%]"></div>
-                    </div>
+                        className="w-[10px] h-[10px] rounded-full bg-green-400 absolute top-[7px] right-[8px] border-[2px] border-white"></div>
                 </div>
-
-                <div className="w-10/12">
-                    <h3 className="text-xl font-bold">Tariqul Islam</h3>
-                    <p className="text-lg">
-                        Hi! I am Tariqul Islam, a passionate front-end developer and the creator of Gadget Heaven.
-                        I built this platform to help tech enthusiasts and consumers find the best gadgets available.
-                        My goal is to provide the most up-to-date information, expert reviews, and comparisons to make sure
-                        you get the right tech products to fit your needs. I hope you enjoy your time here!
-                    </p>
-                </div>
+                <h4 className="text-[1.1rem] font-[600] text-gray-700 mt-2">Tariqul Islam</h4>
+                <p className="text-[0.8rem] text-gray-600">Front-End Developer</p>
             </div>
+
+            <a target="_blank" href="https://m.me/tariqul.islam.fb">
+                <button
+                    className="flex mx-auto hover:underline items-center gap-[8px] font-[500] text-[0.9rem] text-[#3B9DF8] mt-4">
+                    <FiMessageCircle className="text-[1.1rem]" />
+                    Send Message
+                </button>
+            </a>
+
+            <div className="bg-white w-[15px] h-[15px] rotate-[45deg] absolute bottom-[-7px] left-[50%] transform translate-x-[-50%]"></div>
+        </div>
+    </div>
+
+    <div className="w-10/12">
+        <h3 className="text-xl font-bold max-sm:text-center">Tariqul Islam</h3>
+        <p className="text-lg max-sm:text-center">
+            Hi! I am Tariqul Islam, a passionate front-end developer and the creator of Gadget Heaven.
+            I built this platform to help tech enthusiasts and consumers find the best gadgets available.
+            My goal is to provide the most up-to-date information, expert reviews, and comparisons to make sure
+            you get the right tech products to fit your needs. I hope you enjoy your time here!
+        </p>
+    </div>
+</div>
+
         </div>
     );
 };

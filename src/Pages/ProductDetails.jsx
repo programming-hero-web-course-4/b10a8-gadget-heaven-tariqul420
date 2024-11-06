@@ -30,6 +30,10 @@ const ProductDetails = () => {
 
     const addWishlistAll = (data) => {
         addWishlist(data)
+
+        const isExist = productWishlist.find(wishlist => wishlist.product_id === data.product_id)
+        if (isExist) return
+
         setProductWishlist([...productWishlist, data])
         setTotalWishlist(totalWishlist + data.price)
     }

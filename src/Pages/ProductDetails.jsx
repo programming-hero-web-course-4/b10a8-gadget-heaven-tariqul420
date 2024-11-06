@@ -24,6 +24,10 @@ const ProductDetails = () => {
 
     const addCardsAll = (data) => {
         addCart(data)
+
+        const isExist = productCarts.find(cart => cart.product_id === data.product_id)
+        if (isExist) return
+
         setProductCart([...productCarts, data])
         setTotalAmount(totalAmount + data.price)
     }

@@ -28,6 +28,10 @@ const DashboardWishlist = () => {
 
     const handelAddToCart = (product) => {
         addCart(product)
+
+        const isExist = productCarts.find(cart => cart.product_id === product.product_id)
+        if (isExist) return
+
         setProductCart([...productCarts, product])
         setTotalAmount(totalAmount + product.price)
         removeWishlist(product.product_id)

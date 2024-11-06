@@ -46,14 +46,14 @@ const ProductDetails = () => {
     }, []);
 
     return (
-        <div className="mb-[20rem]">
+        <div className="mb-[20rem] max-sm:mb-[37rem]">
             <div className="bg-color-primary py-8 pb-56 relative">
                 <h2 className="text-center text-white font-bold text-3xl">Product Details</h2>
                 <p className="text-center text-white">Explore the latest gadgets that will take your experience to <br className="max-sm:hidden" /> the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
 
-            <div className="w-10/12 mx-auto flex gap-8 bg-white shadow-md p-8 absolute left-1/2 top-[85%] z-[1000] rounded-2xl" style={{ transform: "translate(-50%,-50%)" }}>
-                <div className="w-[424px]">
+            <div className="w-10/12 mx-auto flex flex-col lg:flex-row gap-8 bg-white shadow-md p-8 absolute left-1/2 top-[100%] lg:top-[85%] z-[1000] rounded-2xl" style={{ transform: "translate(-50%,-50%)" }}>
+                <div className="lg:w-[424px]">
                     <img className="w-full h-full rounded-2xl" src={product_image} alt="" />
                 </div>
                 <div>
@@ -80,17 +80,17 @@ const ProductDetails = () => {
                             <p className="bg-gray-100 p-1 rounded-full">{rating}</p>
                         </div>
                     </div>
-                    <div className="flex gap-4 mt-4">
+                    <div className="flex gap-4 mt-4 max-sm:flex-col">
                         <button
-                            className="flex items-center gap-4 bg-color-primary px-4 py-2 rounded-full text-white font-bold text-xl"
+                            className="flex items-center justify-center gap-4 bg-color-primary px-4 py-2 rounded-full text-white font-bold text-xl"
                             onClick={() => addCardsAll(productData)}
                         >
                             Add To Card <HiOutlineShoppingCart size={25} />
                         </button>
                         <button
-                            className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300"
+                            className="text-[1.3rem] p-2 rounded-full  hover:text-color-primary transition-all duration-300 flex items-center gap-2 justify-center"
                             style={{ border: "1px solid #00000033" }}
-                            onClick={() => addWishlistAll(productData)}>
+                            onClick={() => addWishlistAll(productData)}>Wishlist
                             <MdOutlineFavoriteBorder />
                         </button>
                     </div>

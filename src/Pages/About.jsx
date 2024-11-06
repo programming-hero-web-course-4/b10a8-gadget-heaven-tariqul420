@@ -52,7 +52,7 @@ const About = () => {
 
             <h2 className="text-2xl font-semibold mt-6 mb-4">About the Author</h2>
 
-            <div className="flex gap-8">
+            <div className="flex gap-8 max-sm:flex-col">
                 <div className="relative w-fit h-full flex items-center justify-center"
                     onMouseEnter={() => setIsProfileHovered(true)}
                     onMouseLeave={() => setIsProfileHovered(false)}

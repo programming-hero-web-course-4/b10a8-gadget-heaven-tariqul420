@@ -42,11 +42,15 @@ const NavBar = () => {
                             <HiOutlineShoppingCart />
                         </button>
 
-                        <button className="absolute text-white top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productCarts.length}</button>
+                        {
+                            productCarts.length > 0 && (
+                                <button className="absolute text-white top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productCarts.length}</button>
+                            )
+                        }
 
                         {/*  tooltip  */}
                         <div
-                            className={` ${isCart ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-290%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300 space-y-1`}>
+                            className={` ${isCart ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-350%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300 space-y-1`}>
                             {/*  Content  */}
                             <h2 className="text-center font-bold text-xl">{productCarts.length} Item In Cart</h2>
                             <p className="text-center font-semibold text-color-secondary">Sub Total: {totalAmount}</p>
@@ -72,11 +76,15 @@ const NavBar = () => {
                             <MdOutlineFavoriteBorder />
                         </button>
 
-                        <button className="absolute text-white top-[-15px] right-[-5px] w-[25px] h-[25px] items-center justify-center bg-color-primary2 rounded-full font-bold">{productWishlist.length}</button>
+                        {productWishlist.length > 0 && (
+                            <button className="absolute text-white top-[-15px] right-[-5px] w-[25px] h-[25px] flex items-center justify-center bg-color-primary2 rounded-full font-bold">
+                                {productWishlist.length}
+                            </button>
+                        )}
 
                         {/*  tooltip  */}
                         <div
-                            className={` ${isWishlist ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-290%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300 space-y-1`}>
+                            className={` ${isWishlist ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-350%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300 space-y-1`}>
                             {/*  Content  */}
                             <h2 className="text-center font-bold text-xl">{productWishlist.length} Item In Wishlist</h2>
                             <p className="text-center font-semibold text-color-secondary">Sub Total: {totalWishlist}</p>
@@ -98,7 +106,7 @@ const NavBar = () => {
                 </div>
 
                 <aside
-                    className={` ${mobileSidebarOpen ? "translate-x-0 opacity-100 z-20" : "translate-x-[200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
+                    className={` ${mobileSidebarOpen ? "translate-y-0 opacity-100 z-[2000]" : "translate-y-[-200px] opacity-0 z-[-1]"} lg:hidden bg-white boxShadow p-4 text-center absolute top-[65px] right-0 w-full rounded-md transition-all duration-300`}>
                     <div className="relative mb-5">
                         <input
                             className="py-1.5 pr-4 w-full pl-10 rounded-full border border-gray-200 outline-none focus:border-[#3B9DF8]"
@@ -107,8 +115,9 @@ const NavBar = () => {
                     </div>
                     <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
                         <NavLink to="/"><li className="navBarLink">Home</li></NavLink>
-                        <NavLink to="/statistics"><li className="navBarLink">Coffees</li></NavLink>
+                        <NavLink to="/statistics"><li className="navBarLink">Statistics</li></NavLink>
                         <NavLink to="/dashboard"><li className="navBarLink">Dashboard</li></NavLink>
+                        <NavLink to="/about"><li className="navBarLink">About</li></NavLink>
                     </ul>
                 </aside>
             </nav>

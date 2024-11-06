@@ -4,7 +4,13 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 const WishlistCart = ({ product, handelRemove, handelAddToCart }) => {
     const { product_image, product_title, description, price, product_id } = product
     return (
-        <div className="flex p-8 gap-12 shadow-md hover:shadow-lg rounded-2xl active:scale-[1] transition-all duration-300">
+        <div className="flex max-sm:flex-col p-8 gap-12 shadow-md hover:shadow-lg rounded-2xl active:scale-[1] transition-all duration-300">
+            <div className="md:hidden ml-auto">
+                <button className="text-red-500 text-3xl"
+                    onClick={() => handelRemove(product_id)}>
+                    <IoCloseCircleOutline />
+                </button>
+            </div>
             <div className="w-[300px] h-[150px]">
                 <img className="w-full h-full object-contain" src={product_image} alt="" />
             </div>
@@ -18,7 +24,7 @@ const WishlistCart = ({ product, handelRemove, handelAddToCart }) => {
                         onClick={() => handelAddToCart(product)}>Add To Cart</button>
                 </div>
             </div>
-            <div>
+            <div className="max-sm:hidden">
                 <button className="text-red-500 text-3xl"
                     onClick={() => handelRemove(product_id)}>
                     <IoCloseCircleOutline />

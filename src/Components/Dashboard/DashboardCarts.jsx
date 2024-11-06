@@ -49,11 +49,11 @@ const DashboardCarts = () => {
 
     return (
         <>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between max-sm:flex-col">
                 <div>
                     <h2 className="text-2xl font-bold text-color-secondary">Cart</h2>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 max-sm:flex-col">
                     <h2 className="text-xl font-bold">Total cost: ${totalAmount.toFixed(2)}</h2>
                     <button
                         className={`flex items-center border border-solid border-color-primary px-4 py-2 rounded-full font-bold text-xl gap-2 ${productCarts.length === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'text-color-secondary'

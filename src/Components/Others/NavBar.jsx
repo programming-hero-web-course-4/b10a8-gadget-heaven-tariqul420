@@ -84,7 +84,7 @@ const NavBar = () => {
 
                         {/*  tooltip  */}
                         <div
-                            className={` ${isWishlist ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-350%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] rounded-md p-[15px] shadow-md transition-all duration-300 space-y-1`}>
+                            className={` ${isWishlist ? "opacity-100 z-20 translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute bottom-[-350%] left-[50%] transform translate-x-[-50%] bg-white w-[250px] max-sm:left-[-20%] rounded-md p-[15px] shadow-md transition-all duration-300 space-y-1`}>
                             {/*  Content  */}
                             <h2 className="text-center font-bold text-xl">{productWishlist.length} Item In Wishlist</h2>
                             <p className="text-center font-semibold text-color-secondary">Sub Total: {totalWishlist}</p>

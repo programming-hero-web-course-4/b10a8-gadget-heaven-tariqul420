@@ -14,6 +14,8 @@ const ProductDetails = () => {
 
     const { productCarts, setProductCart } = useContext(ContextApi);
     const { productWishlist, setProductWishlist } = useContext(ContextApi);
+    const { totalAmount, setTotalAmount } = useContext(ContextApi);
+    const { totalWishlist, setTotalWishlist } = useContext(ContextApi);
 
 
     const productData = data.find(product => product.product_id === parseInt(productId))
@@ -23,11 +25,13 @@ const ProductDetails = () => {
     const addCardsAll = (data) => {
         addCart(data)
         setProductCart([...productCarts, data])
+        setTotalAmount(totalAmount + data.price)
     }
 
     const addWishlistAll = (data) => {
         addWishlist(data)
         setProductWishlist([...productWishlist, data])
+        setTotalWishlist(totalWishlist + data.price)
     }
     useEffect(() => {
         document.title = 'Product | Gadget Heaven';

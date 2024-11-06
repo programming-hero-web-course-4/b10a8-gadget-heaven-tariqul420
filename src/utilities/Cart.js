@@ -11,8 +11,8 @@ const getAllCart = () => {
 };
 const addCart = (product) => {
   const cart = getAllCart();
-  const isExist = cart.find((productItem) => productItem.product_id == product.product_id);
-  if (isExist) return toast.error("Product already exists!");
+  // const isExist = cart.find((productItem) => productItem.product_id == product.product_id);
+  // if (isExist) return toast.error("Product already exists!");
 
   cart.push(product);
   localStorage.setItem("productCart", JSON.stringify(cart));

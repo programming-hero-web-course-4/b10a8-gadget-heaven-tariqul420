@@ -7,11 +7,18 @@ import WishlistCart from "./WishlistCart";
 const DashboardWishlist = () => {
     const { productWishlist, setProductWishlist } = useContext(ContextApi);
     const { productCarts, setProductCart } = useContext(ContextApi);
+    const { totalAmount, setTotalAmount } = useContext(ContextApi);
+    const { setTotalWishlist } = useContext(ContextApi)
 
     useEffect(() => {
         const allProduct = getAllWishlist()
         setProductWishlist(allProduct)
     }, [setProductWishlist])
+
+    useEffect(() => {
+        const total = productWishlist.reduce((acc, product) => acc + product.price, 0);
+        setTotalWishlist(total)
+    }, [productWishlist, setTotalWishlist])
 
     const handelRemove = (id) => {
         removeWishlist(id)
@@ -22,6 +29,7 @@ const DashboardWishlist = () => {
     const handelAddToCart = (product) => {
         addCart(product)
         setProductCart([...productCarts, product])
+        setTotalAmount(totalAmount + product.price)
         removeWishlist(product.product_id)
         const allProduct = getAllWishlist()
         setProductWishlist(allProduct)

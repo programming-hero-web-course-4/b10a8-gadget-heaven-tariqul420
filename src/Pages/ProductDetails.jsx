@@ -46,13 +46,13 @@ const ProductDetails = () => {
     }, []);
 
     return (
-        <div className="mb-[20rem] max-sm:mb-[37rem]">
+        <div className="lg:mb-[20rem] md:mb-[47rem] mb-[37rem]">
             <div className="bg-color-primary py-8 pb-56 relative">
                 <h2 className="text-center text-white font-bold text-3xl">Product Details</h2>
                 <p className="text-center text-white">Explore the latest gadgets that will take your experience to <br className="max-sm:hidden" /> the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
 
-            <div className="w-10/12 mx-auto flex flex-col lg:flex-row gap-8 bg-white shadow-md p-8 absolute left-1/2 top-[100%] lg:top-[85%] z-[1000] rounded-2xl" style={{ transform: "translate(-50%,-50%)" }}>
+            <div className="w-10/12 mx-auto flex flex-col lg:flex-row gap-8 bg-white shadow-md p-8 absolute left-1/2 top-[100%] md:top-[73%] lg:top-[85%] z-[1000] rounded-2xl" style={{ transform: "translate(-50%,-50%)" }}>
                 <div className="lg:w-[424px]">
                     <img className="w-full h-full rounded-2xl" src={product_image} alt="" />
                 </div>
